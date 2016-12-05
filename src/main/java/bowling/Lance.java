@@ -51,8 +51,7 @@ public class Lance {
         if (isStrike()) {
             return Frame.MAX_VALUE;
         } else if (isSpare()) {
-            // might be good to take into account the previous
-            // launch, but not necessary.
+
             return Frame.MAX_VALUE;
         } else if (isDigit()) {
             return Integer.parseInt("" + lance);
