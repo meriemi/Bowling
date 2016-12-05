@@ -46,7 +46,6 @@ public class Lance {
     public boolean isValid() {
         return isDigit() || isZero() || isSpare() || isStrike();
     }
-
     public int getValue() {
         if (isStrike()) {
             return Frame.MAX_VALUE;
