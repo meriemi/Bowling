@@ -1,19 +1,21 @@
 package bowling;
 
 public class Lance {
+
+
+
     public static final char ZERO = '_',
             STRIKE = 'X',
             SPARE = '/';
 
-    private char launch;
+    private char lance;
 
     private Lance next;
 
-    public Lance(char launch) {
-        this.launch = launch;
+    public Lance(char lance) {
+        this.lance = lance;
         next = null;
     }
-
 
     public Lance getNext() {
         return next;
@@ -25,20 +27,20 @@ public class Lance {
 
 
     public boolean isStrike() {
-        return launch == STRIKE;
+        return lance == STRIKE;
     }
 
     public boolean isSpare() {
-        return launch == SPARE;
+        return lance == SPARE;
     }
 
     public boolean isZero() {
-        return launch == ZERO;
+        return lance == ZERO;
     }
 
     public boolean isDigit() {
         // A 0 should be stored as ZERO.
-        return Character.isDigit(launch) && launch != '0';
+        return Character.isDigit(lance) && lance != '0';
     }
 
     public boolean isValid() {
@@ -53,7 +55,7 @@ public class Lance {
             // launch, but not necessary.
             return Frame.MAX_VALUE;
         } else if (isDigit()) {
-            return Integer.parseInt("" + launch);
+            return Integer.parseInt("" + lance);
         } else {
             return 0;
         }
